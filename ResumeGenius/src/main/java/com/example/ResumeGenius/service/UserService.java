@@ -3,11 +3,13 @@ package com.example.ResumeGenius.service;
 import com.example.ResumeGenius.entity.User;
 import com.example.ResumeGenius.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 
@@ -26,9 +28,9 @@ public class UserService {
         return userRepository.findById(userId);
     }
     public User updateUser(String userId, User updatedUser) {
-        Optional<User> existingProduct = userRepository.findById(userId);
-        if (existingProduct.isPresent()) {
-            User user = existingProduct.get();
+        Optional<User> existingUser = userRepository.findById(userId);
+        if (existingUser.isPresent()) {
+            User user = existingUser.get();
             user.setRoleId(updatedUser.getRoleId());
             user.setTitle(updatedUser.getTitle());
             user.setFirstName(updatedUser.getFirstName());

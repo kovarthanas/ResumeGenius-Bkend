@@ -2,6 +2,9 @@ package com.example.ResumeGenius;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import com.example.ResumeGenius.service.UserService;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,9 +14,10 @@ import java.sql.Statement;
 @SpringBootApplication
 public class ResumeGeniusApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		SpringApplication.run(ResumeGeniusApplication.class, args);
 	}
+
 
 //	public static void main(String args[]){
 //		try{
