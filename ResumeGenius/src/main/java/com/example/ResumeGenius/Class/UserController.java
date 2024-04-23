@@ -1,6 +1,7 @@
 package com.example.ResumeGenius.Class;
 
 import com.example.ResumeGenius.entity.User;
+import com.example.ResumeGenius.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,4 +50,7 @@ public class UserController {
             return ResponseEntity.ok("User deleted successfully");
         }
     }
-}
+
+
+    }
+
